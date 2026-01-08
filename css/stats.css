@@ -1,0 +1,33 @@
+/* Stats Section */
+.stats {
+    display: flex;
+    text-align: left;
+    column-gap: 24px;
+}
+
+.stat-item h2 {
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 700;
+    background: linear-gradient(180deg,#032E15 0%,#016630 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-item p {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 104%;
+    background: linear-gradient(180deg,#032E15 0%,#016630 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
