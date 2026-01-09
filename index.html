@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/percentage-stats.css">
     <link rel="stylesheet" href="css/comparison.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    
 </head>
 <body>
     
@@ -31,6 +33,8 @@
             <a href="#blog">Blog</a>
             <a href="#contact">Contact</a>
         </nav>
+        
+        <button href="#shop" class="cta-button">Shop Now</button>
         <button class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -48,7 +52,7 @@
         <a href="#contact">Contact</a>
     </div>
     <div class="hero-elements">
-        <span>Awarded the best perfume in the world</span>
+        <button>Awarded the best perfume in the world</button>
         <h1>Live your best life.</h1>
         <!-- Stats Section -->
     <section class="stats">
@@ -66,55 +70,51 @@
         </div>
     </section>
         <a href="#shop" class="cta-button">Shop Now</a>
-    </section>
 </div>
-
+</section>
     <!-- Ingredients Marquee -->
-    <section class="ingredients">
-        <div class="marquee">
-            <span>Lion's Mane Mushroom</span>
-            <span>Cordyceps Mushroom</span>
-            <span>He Shou Wu Root</span>
-            <span>Astragalus Root</span>
-            <span>Reishi Mushroom</span>
-            <span>Mucuna Pruriens</span>
-            <span>Shilajit</span>
-            <span>Polygala Root</span>
-            <span>Gynostemma Leaf</span>
-            <span>Lion's Mane Mushroom</span>
-            <span>Cordyceps Mushroom</span>
-            <span>He Shou Wu Root</span>
-            <span>Astragalus Root</span>
-            <span>Reishi Mushroom</span>
-            <span>Mucuna Pruriens</span>
-            <span>Shilajit</span>
-            <span>Polygala Root</span>
-            <span>Gynostemma Leaf</span>
-        </div>
-    </section>
+   
 
     <!-- Product Section -->
     <section class="product-section" id="shop">
         <div class="product-container">
             <div class="gallery">
-                <img src="https://via.placeholder.com/600x600/667eea/ffffff?text=Perfume+1" alt="GTG Perfume" class="main-image" id="mainImage">
-                <div class="gallery-controls">
-                    <button class="arrow-btn" id="prevBtn">←</button>
-                    <div class="dots">
-                        <span class="dot active" data-index="0"></span>
-                        <span class="dot" data-index="1"></span>
-                        <span class="dot" data-index="2"></span>
-                        <span class="dot" data-index="3"></span>
-                    </div>
-                    <button class="arrow-btn" id="nextBtn">→</button>
+                <div class="image-container">
+                  <img src="../GTG/assets/ogperfume.jpg" alt="GTG Perfume" class="main-image" id="mainImage">
+                  
+                  <button class="arrow-btn arrow-left" id="prevBtn">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.405232" y="0.405232" width="38.0919" height="38.0919" rx="19.0459" stroke="#032E15" stroke-width="0.810465"/>
+                        <path d="M25.9362 18.641H16.0728L20.6033 14.1105L19.4525 12.9678L12.9688 19.4515L19.4525 25.9352L20.5952 24.7925L16.0728 20.262H25.9362V18.641Z" fill="#032E15"/>
+                        </svg>                        
+                  </button>
+                  
+                  <button class="arrow-btn arrow-right" id="nextBtn">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="-0.405232" y="0.405232" width="38.0919" height="38.0919" rx="19.0459" transform="matrix(-1 0 0 1 38.0919 0)" stroke="#032E15" stroke-width="0.810465"/>
+                        <path d="M12.9701 18.641H22.8334L18.3029 14.1105L19.4538 12.9678L25.9375 19.4515L19.4538 25.9352L18.311 24.7925L22.8334 20.262H12.9701V18.641Z" fill="#032E15"/>
+                        </svg>                        
+                  </button>
+                  
+                  <div class="dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                  </div>
                 </div>
+                
                 <div class="thumbnails">
-                    <img src="https://via.placeholder.com/150x150/667eea/ffffff?text=1" alt="Thumbnail 1" class="thumbnail active" data-index="0">
-                    <img src="https://via.placeholder.com/150x150/764ba2/ffffff?text=2" alt="Thumbnail 2" class="thumbnail" data-index="1">
-                    <img src="https://via.placeholder.com/150x150/f093fb/ffffff?text=3" alt="Thumbnail 3" class="thumbnail" data-index="2">
-                    <img src="https://via.placeholder.com/150x150/4facfe/ffffff?text=4" alt="Thumbnail 4" class="thumbnail" data-index="3">
+                  <img src="../GTG/assets/thumbnailone.png" alt="Thumbnail 1" class="thumbnail active" data-index="0">
+                  <img src="../GTG/assets/thumbnailtwo.png" alt="Thumbnail 2" class="thumbnail" data-index="1">
+                  <img src="../GTG/assets/thumbnailthree.png" alt="Thumbnail 3" class="thumbnail" data-index="2">
+                  <img src="../GTG/assets/thumbnailfour.png" alt="Thumbnail 4" class="thumbnail" data-index="3">
+                  <img src="../GTG/assets/thumbnailone.png" alt="Thumbnail 5" class="thumbnail active" data-index="4">
+                  <img src="../GTG/assets/thumbnailtwo.png" alt="Thumbnail 6" class="thumbnail" data-index="5">
+                  <img src="../GTG/assets/thumbnailthree.png" alt="Thumbnail 7" class="thumbnail" data-index="6">
+                  <img src="../GTG/assets/thumbnailfour.png" alt="Thumbnail 8" class="thumbnail" data-index="7">
                 </div>
-            </div>
+              </div>
 
             <div class="product-info">
                 <h2>GTG Perfumes</h2>

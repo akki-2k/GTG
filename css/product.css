@@ -14,57 +14,78 @@
 
 .gallery {
     position: relative;
-}
-
-.main-image {
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .main-image {
     width: 100%;
     height: 600px;
-    object-fit: cover;
     border-radius: 20px;
-    margin-bottom: 20px;
-}
-
-.gallery-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.arrow-btn {
-    background: #667eea;
-    color: white;
+    display: block;
+  }
+  
+  .arrow-btn {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-50%);
+    color: #333;
     border: none;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 18px;
-    transition: background 0.3s;
-}
-
-.arrow-btn:hover {
-    background: #5568d3;
-}
-
-.dots {
     display: flex;
-    gap: 10px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .arrow-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .arrow-left {
+    left: 20px;
+  }
+  
+  .arrow-right {
+    right: 20px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: #ddd;
+    border: 1px solid #032E15;
     cursor: pointer;
     transition: background 0.3s;
-}
-
-.dot.active {
-    background: #667eea;
-}
-
+  }
+  
+  .dot.active {
+    background: rgba(3, 46, 21, 1);
+  }
+  
+  .gallery-controls {
+    display: none; /* Remove this if you had it */
+  }
 .thumbnails {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -72,8 +93,8 @@
 }
 
 .thumbnail {
-    width: 100%;
-    height: 100px;
+    width: 130px;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
@@ -100,7 +121,7 @@
 }
 
 .stars {
-    color: #ffc107;
+    color: #09c950;
 }
 
 .product-description {

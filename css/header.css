@@ -1,17 +1,30 @@
 /* Header Styles */
+* {
+    font-family: 'Inter';
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    width: 1456px;
+    height: 73px;
     top: 0;
+    padding: 12px 64px;
     z-index: 1000;
 }
-
+header .cta-button {
+    margin-top: 0;
+    padding: 16px 28px;
+    font-size: 18px;
+    font-family: 'Inter', 'sans-serif';
+}
 .logo {
     font-size: 32px;
     font-weight: bold;
-    color: #000;
+    background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-decoration: none;
 }
 

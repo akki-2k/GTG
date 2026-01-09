@@ -1,9 +1,13 @@
 // Gallery Functionality
 const images = [
-    'https://via.placeholder.com/600x600/667eea/ffffff?text=Perfume+1',
-    'https://via.placeholder.com/600x600/764ba2/ffffff?text=Perfume+2',
-    'https://via.placeholder.com/600x600/f093fb/ffffff?text=Perfume+3',
-    'https://via.placeholder.com/600x600/4facfe/ffffff?text=Perfume+4'
+    '../GTG/assets/thumbnailone.png',
+    '../GTG/assets/thumbnailtwo.png',
+    '../GTG/assets/thumbnailthree.png',
+    '../GTG/assets/thumbnailfour.png',
+    '../GTG/assets/thumbnailone.png',
+    '../GTG/assets/thumbnailtwo.png',
+    '../GTG/assets/thumbnailthree.png',
+    '../GTG/assets/thumbnailfour.png'
 ];
 
 let currentIndex = 0;
