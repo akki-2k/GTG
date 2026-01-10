@@ -195,40 +195,81 @@
     </section>
 
     <!-- Collection Section -->
-    <section class="collection-section" id="fragrances">
-        <h2>Our Collection</h2>
-        <p>Discover our curated line of signature perfumes, designed to become your daily companion.</p>
+     <div class="collection-container">
         <div class="collection-grid">
-            <div class="collection-item">
-                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Signature+Scent" alt="Signature Scent" loading="lazy">
-                <div class="collection-content">
-                    <h3>Signature Scents</h3>
-                    <p>Our most popular fragrance collection</p>
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <h1>Our Collection</h1>
+                
+                <div class="accordion">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item active">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="accordion-title">Signature Scents</span>
+                            <span class="accordion-icon">−</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p class="accordion-description">
+                                    Discover our curated line of signature perfumes, designed to become your daily companion.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="accordion-title">Signature Scents</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p class="accordion-description">
+                                    Experience our exclusive collection of oriental fragrances with rich, warm notes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="accordion-title">Signature Scents</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p class="accordion-description">
+                                    Explore our fresh and vibrant collection perfect for everyday elegance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="accordion-title">Signature Scents</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p class="accordion-description">
+                                    Indulge in our luxurious evening collection with deep, sophisticated notes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="collection-item">
-                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Limited+Edition" alt="Limited Edition" loading="lazy">
-                <div class="collection-content">
-                    <h3>Signature Scents</h3>
-                    <p>Exclusive seasonal fragrances</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Classic+Collection" alt="Classic Collection" loading="lazy">
-                <div class="collection-content">
-                    <h3>Signature Scents</h3>
-                    <p>Timeless scents for every occasion</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Premium+Line" alt="Premium Line" loading="lazy">
-                <div class="collection-content">
-                    <h3>Signature Scents</h3>
-                    <p>Luxury fragrances for connoisseurs</p>
-                </div>
+
+            <!-- Right Panel -->
+            <div class="right-panel">
+                <img src="../GTG/assets/collectionimg.png" alt="Perfume Collection">
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Percentage Stats -->
     <section class="percentage-stats" id="statsSection">
@@ -370,6 +411,7 @@
     </footer>
 
     <script src="js/mobile-menu.js"></script>
+    <script src="js/collection.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/product-options.js"></script>
     <script src="js/counter-animation.js"></script>
