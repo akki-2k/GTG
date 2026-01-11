@@ -1,39 +1,37 @@
 /* Percentage Stats */
 .percentage-stats {
-    padding: 80px 5%;
-    background: #fff;
+  padding: 56px 0;
+  margin: 98px 0 70px 0;
+  background: linear-gradient(180deg, #032e15 0%, #016630 100%);
 }
 
 .percentage-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 86px;
+  min-width: 1119px;
+  margin: 0 auto;
 }
 
 .percentage-item {
-    text-align: center;
-    padding: 30px;
-    background: #f9f9f9;
-    border-radius: 15px;
+  text-align: center;
 }
 
 .percentage-number {
-    font-size: 56px;
-    font-weight: bold;
-    color: #667eea;
-    margin-bottom: 15px;
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
 }
 
 .percentage-item p {
-    font-size: 16px;
-    color: #666;
+  font-size: 16px;
+  color: #fff;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .percentage-grid {
-        grid-template-columns: 1fr;
-    }
+  .percentage-grid {
+    grid-template-columns: 1fr;
+  }
 }

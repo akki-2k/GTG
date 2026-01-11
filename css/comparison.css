@@ -1,62 +1,300 @@
-/* Comparison Table */
-.comparison-section {
-    padding: 80px 5%;
-    background: #f9f9f9;
+.comparison-container {
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto 104px auto;
+  text-align: center;
 }
 
-.comparison-section h2 {
-    text-align: center;
-    font-size: 42px;
-    margin-bottom: 60px;
+.divider {
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
 }
 
-.table-container {
-    max-width: 1200px;
-    margin: 0 auto;
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.comparison-wrapper {
+  display: grid;
+  grid-template-columns: 200px repeat(4, 1fr);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column:first-child {
+  border-left: none;
+}
+
+.column:first-child .row-label {
+  background: transparent !important;
+}
+
+/* Column hover states */
+.column:hover .product-header {
+  background: #f0fdf4;
+  border-bottom: 1px dashed #322d2d;
+  transition: all 0.3s ease;
+}
+
+.column:hover .product-name {
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+}
+
+.column:hover .product-header.text {
+  border-bottom: 1px solid #322d2d;
+  background: transparent;
+}
+
+.column:hover .cell {
+  background: #f0fdf4;
+  border-bottom: 1px dashed #322d2d;
+  transition: all 0.3s ease;
+}
+
+/* Icon hover effects */
+.column:hover .icon-check,
+.column:hover .icon-check-gray,
+.column:hover .icon-x {
+  background: #032e15;
+  border-color: #032e15;
+  color: #f0eee6;
+  transition: all 0.3s ease;
+}
+
+/* Default icon states */
+.icon-check-gray,
+.icon-x {
+  background: transparent;
+}
+
+.product-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 175px;
+  border-bottom: 1px solid #666;
+}
+
+.product-header.text {
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #666;
+  height: 175px;
+}
+
+.product-header.text span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+}
+
+.product-image {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+.product-name {
+font-weight: 300;
+font-size: 12px;
+line-height: 19.16px;
+color: #666;
+
+}
+
+.cell {
+  padding: 20px;
+  border-bottom: 1px solid #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+  height: 64px;
+}
+
+.row-label {
+  padding: 18px 0 18px 15px;
+  border-bottom: 1px solid #666;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 700;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.2;
+  height: 64px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-check {
+  background: transparent;
+  border: 2px solid #9ca3af;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.icon-check-gray {
+  border: 2px solid #9ca3af;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.icon-x {
+  border: 2px solid #9ca3af;
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.comparison-container .cta-button {
+  margin-top: 80px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  padding: 12px 24px;
+  width: auto;
+}
+
+button {
+  background: linear-gradient(90deg, #032e15 0%, #016630 100%);
+  color: white;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px #0166320d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .comparison-wrapper {
+    grid-template-columns: 140px repeat(4, 1fr);
     overflow-x: auto;
+    min-width: 600px;
+  }
+
+  .comparison-container {
+    overflow-x: auto;
+  }
+
+  .product-header {
+    padding: 20px 10px;
+    min-height: 150px;
+  }
+
+  .product-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .product-name {
+    font-size: 12px;
+  }
+
+  .cell,
+  .row-label {
+    padding: 15px 10px;
+    font-size: 13px;
+    min-height: 56px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .icon-check,
+  .icon-check-gray {
+    font-size: 12px;
+  }
+
+  .icon-x {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 14px 32px;
+  }
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-thead {
-    background: #667eea;
-    color: white;
-}
-
-th, td {
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-
-th {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-tbody tr:hover {
-    background: #f9f9f9;
-}
-
-tbody tr:last-child td {
-    border-bottom: none;
-}
-
-/* Responsive */
 @media (max-width: 480px) {
-    .comparison-section h2 {
-        font-size: 32px;
-    }
+  h1 {
+    font-size: 20px;
+  }
 
-    th, td {
-        padding: 12px 8px;
-        font-size: 14px;
-    }
+  .comparison-wrapper {
+    grid-template-columns: 120px repeat(4, 90px);
+  }
+
+  .product-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .product-name {
+    font-size: 11px;
+  }
+
+  .cell,
+  .row-label {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 12px 28px;
+  }
 }

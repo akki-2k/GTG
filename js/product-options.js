@@ -1,36 +1,49 @@
-// Product Options and Cart Link Management
-const fragranceRadios = document.querySelectorAll('input[name="fragrance"]');
-const purchaseRadios = document.querySelectorAll('input[name="purchase"]');
-const addToCartBtn = document.getElementById('addToCart');
-const currentPriceEl = document.getElementById('currentPrice');
-const singleDetails = document.getElementById('singleDetails');
-const doubleDetails = document.getElementById('doubleDetails');
+// JavaScript for subscription selection and dynamic cart link
+ 
+    // Subscription toggle functionality
+    const singleRadio = document.getElementById('single');
+    const doubleRadio = document.getElementById('double');
+    const singleDetails = document.getElementById('singleDetails');
+    const doubleDetails = document.getElementById('doubleDetails');
 
-function updateCartLink() {
-    const fragrance = document.querySelector('input[name="fragrance"]:checked').value;
-    const purchase = document.querySelector('input[name="purchase"]:checked').value;
-    
-    // Update price display
-    const prices = {
-        'single': '$99.99',
-        'double': '$169.99',
-        'onetime': '$146'
-    };
-    currentPriceEl.textContent = prices[purchase];
-    
-    // Generate cart link (9 possible combinations)
-    const cartLink = `https://example.com/cart?fragrance=${fragrance}&type=${purchase}`;
-    addToCartBtn.href = cartLink;
-    
-    // Update subscription details visibility
-    singleDetails.classList.toggle('active', purchase === 'single');
-    doubleDetails.classList.toggle('active', purchase === 'double');
-}
+    function toggleSubscription() {
+      if (singleRadio.checked) {
+        singleDetails.classList.add('active');
+        doubleDetails.classList.remove('active');
+      } else {
+        singleDetails.classList.remove('active');
+        doubleDetails.classList.add('active');
+      }
+      updateCartLink();
+    }
 
-fragranceRadios.forEach(radio => {
-    radio.addEventListener('change', updateCartLink);
-});
+    singleRadio.addEventListener('change', toggleSubscription);
+    doubleRadio.addEventListener('change', toggleSubscription);
 
-purchaseRadios.forEach(radio => {
-    radio.addEventListener('change', updateCartLink);
-});
+    // Dynamic Add to Cart link
+    function updateCartLink() {
+      const purchaseType = document.querySelector('input[name="purchase"]:checked').value;
+      let fragrance1 = '';
+      let fragrance2 = '';
+
+      if (purchaseType === 'single') {
+        fragrance1 = document.querySelector('input[name="fragrance-single"]:checked').value;
+        const url = `https://example.com/cart?type=${purchaseType}&fragrance=${fragrance1}`;
+        document.getElementById('addToCartBtn').href = url;
+        console.log('Cart URL:', url);
+      } else {
+        fragrance1 = document.querySelector('input[name="fragrance-double-1"]:checked').value;
+        fragrance2 = document.querySelector('input[name="fragrance-double-2"]:checked').value;
+        const url = `https://example.com/cart?type=${purchaseType}&fragrance1=${fragrance1}&fragrance2=${fragrance2}`;
+        document.getElementById('addToCartBtn').href = url;
+        console.log('Cart URL:', url);
+      }
+    }
+
+    // Add listeners to all radio buttons
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', updateCartLink);
+    });
+
+    // Initialize
+    updateCartLink();

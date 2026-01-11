@@ -1,35 +1,26 @@
-// Counter Animation for Percentage Stats
-const percentageNumbers = document.querySelectorAll('.percentage-number');
-let hasAnimated = false;
 
-function animateCounters() {
-    percentageNumbers.forEach(num => {
-        const target = parseInt(num.dataset.target);
-        const duration = 2000;
-        const increment = target / (duration / 16);
+  let started = false;
+
+  window.onscroll = function () {
+    if (started) return;
+
+    if (window.scrollY > 300) {
+      started = true;
+
+      let numbers = document.querySelectorAll(".percentage-number");
+
+      numbers.forEach(function (el) {
         let current = 0;
+        let target = el.getAttribute("data-target");
 
-        const counter = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                num.textContent = target + '%';
-                clearInterval(counter);
-            } else {
-                num.textContent = Math.floor(current) + '%';
-            }
-        }, 16);
-    });
-}
+        let interval = setInterval(function () {
+          current++;
+          el.innerText = current + "%";
 
-// Intersection Observer for scroll-triggered animation
-const statsSection = document.getElementById('statsSection');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !hasAnimated) {
-            animateCounters();
-            hasAnimated = true;
-        }
-    });
-}, { threshold: 0.5 });
-
-observer.observe(statsSection);
+          if (current == target) {
+            clearInterval(interval);
+          }
+        }, 20);
+      });
+    }
+  };

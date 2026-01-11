@@ -9,13 +9,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 114px;
+  align-items: start;
 }
 
 .left-panel {
-  padding: 103px 0;
+  padding: 93px 0 0 0;
 }
 .left-panel h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 30px;
@@ -41,14 +42,9 @@
   padding: 20px;
   background: white;
   cursor: pointer;
-  transition: background-color 0.2s;
   border: none;
   width: 100%;
   text-align: left;
-}
-
-.accordion-header:hover {
-  background-color: #f9fafb;
 }
 
 .accordion-title {
@@ -91,9 +87,9 @@
 }
 
 .right-panel {
-  
   position: relative;
   overflow: hidden;
+  height: 711px;
 }
 
 .right-panel img {
@@ -101,6 +97,9 @@
   border-radius: 30px;
   width: 100%;
   object-fit: cover;
+
+  height: 100%;
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -118,10 +117,5 @@
 
   .right-panel {
     min-height: 400px;
-  }
-
-  .mirror-frame {
-    width: 200px;
-    height: 200px;
   }
 }
