@@ -1,4 +1,4 @@
-// Mobile Menu Toggle
+// hamburger working
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
 

@@ -1,11 +1,9 @@
-/* Product Section */
 .product-section {
   padding: 80px 5%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Product Container */
 .product-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -13,19 +11,16 @@
   align-items: start;
 }
 
-/* Gallery */
 .gallery {
   position: relative;
 }
 
-/* Image Container */
 .image-container {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
 }
 
-/* Main Image */
 .main-image {
   width: 100%;
   height: 600px;
@@ -33,7 +28,6 @@
   display: block;
 }
 
-/* Arrow Buttons */
 .arrow-btn {
   background: transparent;
   padding: 0;
@@ -66,7 +60,6 @@
   right: 20px;
 }
 
-/* Dots */
 .dots {
   position: absolute;
   bottom: 20px;
@@ -90,7 +83,6 @@
   background: rgba(3, 46, 21, 1);
 }
 
-/* Thumbnails */
 .thumbnails {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -112,13 +104,11 @@
   border-color: #667eea;
 }
 
-/* Product Info */
 .product-info h2 {
   font-size: 36px;
   margin-bottom: 10px;
 }
 
-/* Rating */
 .rating {
   display: flex;
   align-items: center;
@@ -132,7 +122,6 @@
   color: #09c950;
 }
 
-/* Product Description */
 .product-description {
   font-size: 16px;
   color: #666;
@@ -140,7 +129,6 @@
   margin-bottom: 30px;
 }
 
-/* Popular Border */
 .populer-border {
   border: 1px solid #b8b8b8;
   border-radius: 6px;
@@ -162,12 +150,10 @@
   margin: 0;
 }
 
-/* Options Group */
 .options-group {
   padding: 24px 0 0;
 }
 
-/* Radio Option */
 .radio-option {
   display: flex;
   align-items: center;
@@ -206,7 +192,6 @@
   font-weight: 600;
 }
 
-/* Radio Option Label Styling */
 .radio-option label::before {
   content: "";
   width: 16px;
@@ -235,7 +220,6 @@
   display: block;
 }
 
-/* Price Section */
 .price-section {
   display: flex;
   align-items: center;
@@ -273,7 +257,6 @@ del {
   font-weight: 400;
 }
 
-/* Radio Options */
 .radio-options {
   display: flex;
   flex-direction: column;
@@ -281,7 +264,6 @@ del {
   padding: 0 32px 32px;
 }
 
-/* Subscription Details */
 .subscription-details {
   display: none;
   margin-top: 24px;
@@ -333,7 +315,6 @@ del {
   margin-right: 8px;
 }
 
-/* Options Group PP */
 .options-groupp h3 {
   margin-bottom: 16px;
   font-family: Inter;
@@ -343,7 +324,6 @@ del {
   color: #032e15;
 }
 
-/* Fragrance Images */
 .fragrance-images {
   display: flex;
   gap: 12px;
@@ -352,12 +332,11 @@ del {
   justify-content: flex-start;
 }
 
-/* Fragrance Image Wrapper */
 .fragrance-img-wrapper {
   background-color: #f9f9f9;
   border: 0.82px solid #ffffff;
   border-radius: 5px;
-  padding-left:5px ;
+  padding-left: 5px;
 }
 
 .fragrance-img-wrapper > div {
@@ -414,7 +393,6 @@ del {
   display: block;
 }
 
-/* Label Badge */
 .fragrance-img-wrapper .label {
   position: relative;
   left: 50%;
@@ -432,14 +410,12 @@ del {
   text-transform: uppercase;
 }
 
-/* Included Section */
 .included-section {
   display: flex;
   gap: 20px;
   margin-top: 16px;
 }
 
-/* Recurring Section */
 .recurring-section {
   border: 1px solid #e0e0e0;
   border-radius: 6px;
@@ -464,7 +440,6 @@ del {
   display: block;
 }
 
-/* Onetime Section */
 .onetime-section {
   flex: 1;
   border: 1px solid #e0e0e0;
@@ -498,7 +473,6 @@ del {
   height: 94px;
 }
 
-/* Add to Cart Button */
 .add-to-cart {
   background: linear-gradient(180deg, #032e15 0%, #016630 100%);
   color: white;
@@ -517,7 +491,6 @@ del {
   line-height: 28px;
 }
 
-/* Border Class */
 .border-class {
   border: 1px solid #b8b8b8;
   border-radius: 6px;
@@ -542,6 +515,61 @@ del {
 }
 
 @media (max-width: 768px) {
+  .product-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .product-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-image {
+    height: auto;
+    max-height: 65vh;
+  }
+
+  .arrow-left {
+    left: 8px;
+  }
+
+  .arrow-right {
+    right: 8px;
+  }
+
+  .thumbnail {
+    width: 100%;
+  }
+
+  .thumbnails {
+    gap: 10px;
+  }
+
+  .radio-options {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .fragrance-images {
+    flex-wrap: wrap;
+  }
+
+  .fragrance-img-wrapper img {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .included-section {
+    flex-direction: column;
+  }
+
+  .onetime-images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .product-section {
     padding: 40px 5%;
   }
@@ -581,5 +609,12 @@ del {
 @media (max-width: 480px) {
   .product-info h2 {
     font-size: 28px;
+  }
+  .thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fragrance-img-wrapper {
+    flex: 0 0 48%;
   }
 }

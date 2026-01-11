@@ -29,9 +29,34 @@
   color: #fff;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+  .percentage-stats {
+    padding: 40px 16px;
+    margin: 40px 0;
+    overflow-x: hidden;
+    border-radius: 6px;
+  }
+
   .percentage-grid {
+    min-width: 0;              
+    width: 100%;
     grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 0 auto;
+  }
+
+  .percentage-item {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .percentage-number {
+    font-size: 42px;
+  }
+
+  .percentage-item p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0 8px;
   }
 }

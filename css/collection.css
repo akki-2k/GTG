@@ -105,10 +105,12 @@
 @media (max-width: 768px) {
   .collection-grid {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .left-panel {
-    padding: 20px;
+    padding: 20px 0 0 0;
   }
 
   h1 {
@@ -116,6 +118,7 @@
   }
 
   .right-panel {
-    min-height: 400px;
+    height: 300px;
+    width: 100%;
   }
 }

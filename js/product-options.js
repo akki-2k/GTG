@@ -40,10 +40,8 @@
       }
     }
 
-    // Add listeners to all radio buttons
     document.querySelectorAll('input[type="radio"]').forEach(radio => {
       radio.addEventListener('change', updateCartLink);
     });
-
-    // Initialize
+    
     updateCartLink();
