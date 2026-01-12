@@ -4,7 +4,7 @@
   window.onscroll = function () {
     if (started) return;
 
-    if (window.scrollY > 300) {
+    if (window.scrollY > 2200) {
       started = true;
 
       let numbers = document.querySelectorAll(".percentage-number");
